@@ -118,3 +118,16 @@ mysql> SELECT COUNT(City) FROM Address_Book_Client;
 |           4 |
 +-------------+
 1 row in set (0.00 sec)
+
+//Sorted Alphabetically
+
+mysql> SELECT * FROM Address_Book_Client ORDER BY FirstName;
++-----------+----------+---------+--------+-------+---------+-------------+
+| FirstName | LastName | Address | city   | State | ZipCode | PhoneNumber |
++-----------+----------+---------+--------+-------+---------+-------------+
+| Baby      | V        | TYU     | A city | TN    |  659321 | 5678943210  |
+| Divi      | P        | ERF     | A city | TN    |  959321 | 567898760   |
+| Herose    | M        | ABC     | D city | AP    |  654327 | 9876123450  |
+| Janani    | V        | XYZ     | A city | TN    |  654321 | 9876543210  |
++-----------+----------+---------+--------+-------+---------+-------------+
+4 rows in set (0.00 sec)
