@@ -65,3 +65,17 @@ mysql> select * from Address_Book_Client;
 | Sri       | K        | PQR     | J city | MH    |  659327 | 8967123450  |
 +-----------+----------+---------+--------+-------+---------+-------------+
 3 rows in set (0.00 sec)
+
+//Delete the values in table
+
+mysql> DELETE FROM Address_Book_Client WHERE LastName = 'K';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Address_Book_Client;
++-----------+----------+---------+--------+-------+---------+-------------+
+| FirstName | LastName | Address | city   | State | ZipCode | PhoneNumber |
++-----------+----------+---------+--------+-------+---------+-------------+
+| Herose    | M        | ABC     | D city | AP    |  654327 | 9876123450  |
+| Janani    | V        | XYZ     | A city | TN    |  654321 | 9876543210  |
++-----------+----------+---------+--------+-------+---------+-------------+
+2 rows in set (0.00 sec)
