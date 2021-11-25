@@ -22,3 +22,30 @@ mysql> show databases;
 
 mysql> USE address_book_system;
 Database changed
+
+
+//Create table as its attribute
+
+mysql> CREATE TABLE Address_Book_Client(FirstName varchar(10), LastName varchar(10), Address varchar(50), city varchar(20), State varchar(20), ZipCode int, PhoneNumber varchar(10), primary key(FirstName));
+Query OK, 0 rows affected (0.07 sec)
+
+//Insert values into database
+
+mysql> INSERT INTO Address_Book_Client(FirstName, LastName, Address, city, State, ZipCode, PhoneNumber)values ('Janani', 'V', 'XYZ', 'A city', 'TN', '654321', '9876543210');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO Address_Book_Client(FirstName, LastName, Address, city, State, ZipCode, PhoneNumber)values ('Herose', 'M', 'ABC', 'D city', 'AP', '654327', '9876123450');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Address_Book_Client(FirstName, LastName, Address, city, State, ZipCode, PhoneNumber)values ('Sri', 'V', 'PQR', 'J city', 'MH', '659327', '8967123450');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from Address_Book_Client;
++-----------+----------+---------+--------+-------+---------+-------------+
+| FirstName | LastName | Address | city   | State | ZipCode | PhoneNumber |
++-----------+----------+---------+--------+-------+---------+-------------+
+| Herose    | M        | ABC     | D city | AP    |  654327 | 9876123450  |
+| Janani    | V        | XYZ     | A city | TN    |  654321 | 9876543210  |
+| Sri       | V        | PQR     | J city | MH    |  659327 | 8967123450  |
++-----------+----------+---------+--------+-------+---------+-------------+
+3 rows in set (0.00 sec)
