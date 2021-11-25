@@ -108,3 +108,13 @@ mysql> SELECT * FROM Address_Book_Client WHERE State = 'TN';
 | Janani    | V        | XYZ     | A city | TN    |  654321 | 9876543210  |
 +-----------+----------+---------+--------+-------+---------+-------------+
 3 rows in set (0.00 sec)
+
+//Size of Table
+
+mysql> SELECT COUNT(City) FROM Address_Book_Client;
++-------------+
+| COUNT(City) |
++-------------+
+|           4 |
++-------------+
+1 row in set (0.00 sec)
