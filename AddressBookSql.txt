@@ -184,3 +184,13 @@ mysql> select FirstName, LastName, Type from address_book_client;
 | Janani    | V        | Wife   |
 +-----------+----------+--------+
 4 rows in set (0.00 sec)
+
+//count using Type
+
+mysql> SELECT COUNT(Type) FROM Address_Book_Client;
++-------------+
+| COUNT(Type) |
++-------------+
+|           4 |
++-------------+
+1 row in set (0.01 sec)
