@@ -194,3 +194,24 @@ mysql> SELECT COUNT(Type) FROM Address_Book_Client;
 |           4 |
 +-------------+
 1 row in set (0.01 sec)
+
+//Add New Contact
+
+mysql> INSERT INTO Address_Book_Client(FirstName, LastName, Address, city, State, ZipCode, PhoneNumber, Type)values ('Prema', 'M', 'ZAS', 'U city', 'UP', '611321', '6776543210', 'Family');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Address_Book_Client(FirstName, LastName, Address, city, State, ZipCode, PhoneNumber, Type)values ('Ram', 'P', 'QSC', 'Y city', 'PJ', '611377', '6776548810', 'Friend');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from address_book_client;
++-----------+----------+---------+--------+-------+---------+-------------+--------+
+| FirstName | LastName | Address | city   | State | ZipCode | PhoneNumber | Type   |
++-----------+----------+---------+--------+-------+---------+-------------+--------+
+| Baby      | V        | TYU     | A city | TN    |  659321 | 5678943210  | Family |
+| Divi      | P        | ERF     | A city | TN    |  959321 | 567898760   | Sister |
+| Herose    | M        | ABC     | D city | AP    |  654327 | 9876123450  | Father |
+| Janani    | V        | XYZ     | A city | TN    |  654321 | 9876543210  | Wife   |
+| Prema     | M        | ZAS     | U city | UP    |  611321 | 6776543210  | Family |
+| Ram       | P        | QSC     | Y city | PJ    |  611377 | 6776548810  | Friend |
++-----------+----------+---------+--------+-------+---------+-------------+--------+
+6 rows in set (0.00 sec)
