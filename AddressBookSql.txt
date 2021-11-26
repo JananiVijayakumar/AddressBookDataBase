@@ -131,3 +131,56 @@ mysql> SELECT * FROM Address_Book_Client ORDER BY FirstName;
 | Janani    | V        | XYZ     | A city | TN    |  654321 | 9876543210  |
 +-----------+----------+---------+--------+-------+---------+-------------+
 4 rows in set (0.00 sec)
+
+ ALTER TABLE address_book_client ADD Type varchar(20) NOT NULL;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from address_book_client;
++-----------+----------+---------+--------+-------+---------+-------------+------+
+| FirstName | LastName | Address | city   | State | ZipCode | PhoneNumber | Type |
++-----------+----------+---------+--------+-------+---------+-------------+------+
+| Baby      | V        | TYU     | A city | TN    |  659321 | 5678943210  |      |
+| Divi      | P        | ERF     | A city | TN    |  959321 | 567898760   |      |
+| Herose    | M        | ABC     | D city | AP    |  654327 | 9876123450  |      |
+| Janani    | V        | XYZ     | A city | TN    |  654321 | 9876543210  |      |
++-----------+----------+---------+--------+-------+---------+-------------+------+
+4 rows in set (0.00 sec)
+
+mysql> UPDATE address_book_client SET  Type = 'Friend' WHERE FirstName = 'Baby';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE address_book_client SET  Type = 'Sister' WHERE FirstName = 'Divi';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE address_book_client SET  Type = 'Wife' WHERE FirstName = 'Janani';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE address_book_client SET  Type = 'Father' WHERE FirstName = 'Herose';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from address_book_client;
++-----------+----------+---------+--------+-------+---------+-------------+--------+
+| FirstName | LastName | Address | city   | State | ZipCode | PhoneNumber | Type   |
++-----------+----------+---------+--------+-------+---------+-------------+--------+
+| Baby      | V        | TYU     | A city | TN    |  659321 | 5678943210  | Friend |
+| Divi      | P        | ERF     | A city | TN    |  959321 | 567898760   | Sister |
+| Herose    | M        | ABC     | D city | AP    |  654327 | 9876123450  | Father |
+| Janani    | V        | XYZ     | A city | TN    |  654321 | 9876543210  | Wife   |
++-----------+----------+---------+--------+-------+---------+-------------+--------+
+4 rows in set (0.00 sec)
+
+mysql> select FirstName, LastName, Type from address_book_client;
++-----------+----------+--------+
+| FirstName | LastName | Type   |
++-----------+----------+--------+
+| Baby      | V        | Friend |
+| Divi      | P        | Sister |
+| Herose    | M        | Father |
+| Janani    | V        | Wife   |
++-----------+----------+--------+
+4 rows in set (0.00 sec)
